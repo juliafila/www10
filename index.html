@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulatory</title>
+    <script>
+        function dodawanie()
+        {
+            var a = parseFloat(document.getElmentById("a").value);
+            var b = parseFloat(document.getElmentById("b").value);
+            document.getElementById("wynik").innerHTML = a + b;
+        }
+        function odejmowanie()
+        {
+            var a = parseFloat(document.getElmentById("a").value);
+            var b = parseFloat(document.getElmentById("b").value);
+            document.getElementById("wynik").innerHTML = a - b;
+        }
+        function mnożenie()
+        {
+            var a = parseFloat(document.getElmentById("a").value);
+            var b = parseFloat(document.getElmentById("b").value);
+            document.getElementById("wynik").innerHTML = a * b;
+        }
+        function dzielenie()
+        {
+            var a = parseFloat(document.getElmentById("a").value);
+            var b = parseFloat(document.getElmentById("b").value);
+            document.getElementById("wynik").innerHTML = a / b;
+        }
+        function resztazdzielenia()
+        {
+            var a = parseFloat(document.getElmentById("a").value);
+            var b = parseFloat(document.getElmentById("b").value);
+            document.getElementById("wynik").innerHTML = a % b;
+        }
+        function dzieleniecałkowite()
+        {
+            var a = parseInt(document.getElmentById("a").value);
+            var b = parseInt(document.getElmentById("b").value);
+            var c = ParseInt(a/b);
+            document.getElementById("wynik").innerHTML = c;
+        }
+        function potęga()
+        {
+            var a = parseFloat(document.getElmentById("a").value);
+            var b = parseFloat(document.getElmentById("b").value);
+            document.getElementById("wynik").innerHTML = a ** b;
+        }
+    </script>
+</head>
+<body>
+    <h>prosty kalkulator</h>
+    <p> Podaj a = </p>
+    <input type="text" id="a">
+    <p> Podaj b = </p>
+    <input type="text" id="b">
+    <div id ="wynik"> TU UKAZE SIE WYNIK </div>
+    <button onclick="dodawanie()">+</button>
+    <button onclick="odejmowanie()">-</button>
+    <button onclick="mnożenie()">*</button>
+    <button onclick="dzielenie()">/</button>
+    <button onclick="resztazdzielenia()">%</button>
+    <button onclick="dzieleniecałkowite()">//</button>
+    <button onclick="potęga()">**</button>
+</body>
+</html>
